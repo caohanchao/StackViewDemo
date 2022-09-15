@@ -24,8 +24,12 @@ class SectionTitle: UIView {
     var index: Int = 0
     
     private lazy var titleLabel = UILabel().then {
-        $0.textColor = .black
+        $0.textColor = .link
         $0.font = .systemFont(ofSize: 30)
+    }
+    
+    private lazy var line = UIView().then {
+        $0.backgroundColor = UIColor.lightGray
     }
     
     override init(frame: CGRect) {
@@ -33,6 +37,12 @@ class SectionTitle: UIView {
         addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+        }
+        
+        addSubview(line)
+        line.snp.makeConstraints { make in
+            make.leading.trailing.bottom.equalToSuperview()
+            make.height.equalTo(1)
         }
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapAction))

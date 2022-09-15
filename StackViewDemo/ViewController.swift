@@ -13,7 +13,7 @@ class ViewController: UIViewController {
   
     private lazy var vStack = VStack()
 
-    private let list = ["简单列表","嵌套使用","动态更新","case 4","case 5"]
+    private let list = ["简单列表 >","嵌套使用 >","动态更新 >","case 4","case 5"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
