@@ -60,7 +60,7 @@ class SimpleItem: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setupUI()
+        initUI()
     }
     
     required init?(coder: NSCoder) {
@@ -69,7 +69,7 @@ class SimpleItem: UIView {
 }
 
 private extension SimpleItem {
-    func setupUI() {
+    func initUI() {
         
         /// 这里是使用的扩展方法
         iconView.sizeConstraint = CGSize(width: 40, height: 40)
