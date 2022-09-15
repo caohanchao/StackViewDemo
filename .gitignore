@@ -1,0 +1,4 @@
+Pods/
+#*.lock
+profile
+xcuserdata/
