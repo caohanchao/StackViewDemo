@@ -21,6 +21,7 @@
 		5CEFB139063047CDA3164C00 /* Pods_StackViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F099F5BE562D7AC4185453 /* Pods_StackViewDemo.framework */; };
 		CC85467AD78274AFDD4D7E55 /* Pods_StackViewDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93931B4A8E30610F566335D /* Pods_StackViewDemoTests.framework */; };
 		DE51E8C689DFEAE2E7ACDF7F /* Pods_StackViewDemo_StackViewDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC269F7B4E83B1AC14E78B9 /* Pods_StackViewDemo_StackViewDemoUITests.framework */; };
+		EAA4C49428D37A6F005648BD /* SimpleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA4C49328D37A6F005648BD /* SimpleListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		D137F7BFFB9454B53AF56C32 /* Pods-StackViewDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackViewDemoTests.release.xcconfig"; path = "Target Support Files/Pods-StackViewDemoTests/Pods-StackViewDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		D8F099F5BE562D7AC4185453 /* Pods_StackViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93931B4A8E30610F566335D /* Pods_StackViewDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackViewDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAA4C49328D37A6F005648BD /* SimpleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				5B1EAA8A28D2F5CD004F837D /* SceneDelegate.swift */,
 				5B1EAA8C28D2F5CD004F837D /* ViewController.swift */,
 				5B1EAABD28D322B0004F837D /* SectionTitle.swift */,
+				EAA4C49328D37A6F005648BD /* SimpleListViewController.swift */,
 				5B1EAA8E28D2F5CD004F837D /* Main.storyboard */,
 				5B1EAA9128D2F5CF004F837D /* Assets.xcassets */,
 				5B1EAA9328D2F5CF004F837D /* LaunchScreen.storyboard */,
@@ -422,6 +425,7 @@
 			files = (
 				5B1EAABE28D322B0004F837D /* SectionTitle.swift in Sources */,
 				5B1EAA8D28D2F5CD004F837D /* ViewController.swift in Sources */,
+				EAA4C49428D37A6F005648BD /* SimpleListViewController.swift in Sources */,
 				5B1EAABA28D300B2004F837D /* UIStackView+Extension.swift in Sources */,
 				5B1EAA8928D2F5CD004F837D /* AppDelegate.swift in Sources */,
 				5B1EAA8B28D2F5CD004F837D /* SceneDelegate.swift in Sources */,

@@ -11,7 +11,6 @@ import Then
 // MARK: UIStackView扩展
 extension UIStackView {
     
-    
     /// 便捷初始化方法
     convenience init(
         arrangedSubviews: [UIView],
@@ -25,8 +24,6 @@ extension UIStackView {
         self.spacing = spacing
         self.alignment = alignment
         self.distribution = distribution
-//        NSLog("axis:\(axis)")
-        print("axis:\(axis)")
     }
     
     /// 添加管理视图
@@ -36,6 +33,7 @@ extension UIStackView {
         }
     }
     
+    /// 添加管理视图 并且 设置约束
     func addArrangedSubviewsMakeConstraint(_ views: [UIView]) {
         for view in views {
             addArrangedSubview(view)
@@ -50,6 +48,7 @@ extension UIStackView {
         }
     }
     
+    /// 生成一个指定间隔的填充区域
     func spacer(_ space: CGFloat) -> UIView {
         let spacer = UIView().then {
             switch self.axis {
@@ -61,6 +60,12 @@ extension UIStackView {
                 break
             }
         }
+        return spacer
+    }
+    
+    /// 生成一个填充区域
+    func spacer() -> UIView {
+        let spacer = UIView()
         return spacer
     }
 }
@@ -91,7 +96,7 @@ class HStack: UIStackView {
 
 // MARK: VStack
 class VStack: UIStackView {
-
+    /// 便捷初始化方法
     convenience init (
         spacing: CGFloat = 0.0,
         alignment: UIStackView.Alignment = .fill,
@@ -121,7 +126,7 @@ private var sizeConstraintKey = "sizeConstraintKey"
 
 // MARK: UIView支持StackView的扩展
 extension UIView {
-    
+    /// 宽度约束量
     var widthConstraint: CGFloat {
         get {
             return objc_getAssociatedObject(self, &widthConstraintKey) as? CGFloat ?? 0
@@ -130,7 +135,7 @@ extension UIView {
             objc_setAssociatedObject(self, &widthConstraintKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-    
+    /// 高度约束量
     var heightConstraint: CGFloat {
         get {
             return objc_getAssociatedObject(self, &heightConstraintKey) as? CGFloat ?? 0
@@ -139,7 +144,7 @@ extension UIView {
             objc_setAssociatedObject(self, &heightConstraintKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-    
+    /// 尺寸约束量
     var sizeConstraint: CGSize {
         get {
             return objc_getAssociatedObject(self, &sizeConstraintKey) as? CGSize ?? .zero
@@ -148,7 +153,7 @@ extension UIView {
             objc_setAssociatedObject(self, &sizeConstraintKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-    
+    /// 根据设置约束
     func makeConstraint() {
         if (widthConstraint > 0) { makeWidthConstraint(widthConstraint) }
         
@@ -160,11 +165,13 @@ extension UIView {
         }
     }
     
+    /// 设置高度约束
     func makeHeightConstraint(_ height: CGFloat) {
         let heightCons = NSLayoutConstraint.init(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: height)
         NSLayoutConstraint.activate([heightCons])
     }
     
+    /// 设置宽度约束
     func makeWidthConstraint(_ width: CGFloat) {
         let widthCons = NSLayoutConstraint.init(item: self, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: width)
         NSLayoutConstraint.activate([widthCons])

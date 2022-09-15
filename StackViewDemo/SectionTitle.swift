@@ -25,7 +25,7 @@ class SectionTitle: UIView {
     
     private lazy var titleLabel = UILabel().then {
         $0.textColor = .link
-        $0.font = .systemFont(ofSize: 30)
+        $0.font = .systemFont(ofSize: 26)
     }
     
     private lazy var line = UIView().then {
