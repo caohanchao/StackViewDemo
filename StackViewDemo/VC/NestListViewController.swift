@@ -1,15 +1,13 @@
 //
-//  SimpleListViewController.swift
+//  NestListViewController.swift
 //  StackViewDemo
 //
-//  Created by caohanchao on 2022/9/15.
+//  Created by caohanchao on 2022/9/16.
 //
 
 import UIKit
-import Then
-import SnapKit
 
-class SimpleListViewController: UIViewController {
+class NestListViewController: UIViewController {
 
     private lazy var vStack = VStack(spacing: 16)
     
@@ -18,7 +16,7 @@ class SimpleListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "简单列表"
+        title = "嵌套使用"
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: .init(systemName: "xmark"), style: .plain, target: self, action: #selector(backAction))
         
@@ -30,10 +28,11 @@ class SimpleListViewController: UIViewController {
             make.leading.trailing.equalToSuperview()
         }
         
-        var itemList = [SimpleItem]()
+        var itemList = [NestItem]()
         for name in nameList {
-            let item = SimpleItem().then {
+            let item = NestItem().then {
                 $0.title.text = name
+                $0.detail.text = "简介：一枚小鲜肉"
             }
             itemList.append(item)
         }
@@ -43,30 +42,31 @@ class SimpleListViewController: UIViewController {
     @objc func backAction() {
         self.dismiss(animated: true)
     }
+ 
 }
 
-class SimpleItem: UIView {
+
+class NestItem: UIView {
     
     private lazy var hStack = HStack(spacing: 8, alignment: .center, distribution: .fill)
-    
+    private lazy var vStack = VStack(spacing: 4, alignment: .fill, distribution: .fill)
     private lazy var iconView = UIImageView(image: .init(systemName: "person.crop.circle"))
     
     lazy var title = UILabel().then {
         $0.font = .systemFont(ofSize: 18)
     }
-
-    private lazy var follow = UIButton(type: .system).then {
-        $0.setTitleColor(.link, for: .normal)
-        $0.setTitle("+ 关注", for: .normal)
-        $0.layer.cornerRadius = 15
-        $0.layer.borderColor = UIColor.link.cgColor
-        $0.layer.borderWidth = 1
+    
+    lazy var detail = UILabel().then {
+        $0.font = .systemFont(ofSize: 14)
+        $0.textColor = .gray
     }
+    
+    private lazy var helpView = UIImageView(image: .init(systemName: "questionmark.circle"))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        initUI()
+        setupUI()
     }
     
     required init?(coder: NSCoder) {
@@ -74,18 +74,20 @@ class SimpleItem: UIView {
     }
 }
 
-private extension SimpleItem {
-    func initUI() {
-        
-        /// 这里是使用的扩展方法
-        iconView.sizeConstraint = CGSize(width: 40, height: 40)
-        title.heightConstraint = 30
-        follow.sizeConstraint = CGSize(width: 60, height: 30)
-        hStack.addArrangedSubviewsMakeConstraint([iconView, title, hStack.spacer(), follow])
-        
+private extension NestItem {
+    func setupUI() {
+
         addSubview(hStack)
         hStack.snp.makeConstraints { make in
             make.edges.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
         }
+        
+        /// 这里是使用的扩展方法
+        iconView.sizeConstraint = CGSize(width: 50, height: 50)
+        helpView.sizeConstraint = CGSize(width: 30, height: 30)
+        hStack.addArrangedSubviewsMakeConstraint([iconView, vStack, hStack.spacer(), helpView])
+
+        vStack.addArrangedSubviews([title,
+                                    detail])
     }
 }
