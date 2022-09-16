@@ -18,7 +18,7 @@ class SimpleListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "简单列表页"
+        title = "简单列表"
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: .init(systemName: "xmark"), style: .plain, target: self, action: #selector(backAction))
         
@@ -54,8 +54,14 @@ class SimpleItem: UIView {
     lazy var title = UILabel().then {
         $0.font = .systemFont(ofSize: 18)
     }
-    
-    private lazy var helpView = UIImageView(image: .init(systemName: "questionmark.circle"))
+
+    private lazy var follow = UIButton(type: .system).then {
+        $0.setTitleColor(.link, for: .normal)
+        $0.setTitle("+ 关注", for: .normal)
+        $0.layer.cornerRadius = 15
+        $0.layer.borderColor = UIColor.link.cgColor
+        $0.layer.borderWidth = 1
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -74,8 +80,8 @@ private extension SimpleItem {
         /// 这里是使用的扩展方法
         iconView.sizeConstraint = CGSize(width: 40, height: 40)
         title.heightConstraint = 30
-        helpView.sizeConstraint = CGSize(width: 30, height: 30)
-        hStack.addArrangedSubviewsMakeConstraint([iconView, title, hStack.spacer(), helpView])
+        follow.sizeConstraint = CGSize(width: 60, height: 30)
+        hStack.addArrangedSubviewsMakeConstraint([iconView, title, hStack.spacer(), follow])
         
         addSubview(hStack)
         hStack.snp.makeConstraints { make in

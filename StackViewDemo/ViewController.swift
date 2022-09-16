@@ -29,9 +29,13 @@ class ViewController: UIViewController {
                         nav.modalPresentationStyle = .fullScreen
                         self.present(nav, animated: true)
                     } else if index == 1 {
-                        
+                        let nav = UINavigationController.init(rootViewController: NestListViewController())
+                        nav.modalPresentationStyle = .fullScreen
+                        self.present(nav, animated: true)
                     } else if index == 2 {
-                        
+                        let nav = UINavigationController.init(rootViewController: DynamicListViewController())
+                        nav.modalPresentationStyle = .fullScreen
+                        self.present(nav, animated: true)
                     } else if index == 3 {
                         
                     } else if index == 4 {

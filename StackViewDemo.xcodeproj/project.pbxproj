@@ -18,10 +18,12 @@
 		5B1EAAAC28D2F5CF004F837D /* StackViewDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EAAAB28D2F5CF004F837D /* StackViewDemoUITestsLaunchTests.swift */; };
 		5B1EAABA28D300B2004F837D /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EAAB928D300B2004F837D /* UIStackView+Extension.swift */; };
 		5B1EAABE28D322B0004F837D /* SectionTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EAABD28D322B0004F837D /* SectionTitle.swift */; };
+		5B1EAAC228D432A4004F837D /* SimpleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EAAC128D432A4004F837D /* SimpleListViewController.swift */; };
+		5B1EAAC428D432D3004F837D /* NestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EAAC328D432D3004F837D /* NestListViewController.swift */; };
+		5B1EAAC628D46D1D004F837D /* DynamicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EAAC528D46D1D004F837D /* DynamicListViewController.swift */; };
 		5CEFB139063047CDA3164C00 /* Pods_StackViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F099F5BE562D7AC4185453 /* Pods_StackViewDemo.framework */; };
 		CC85467AD78274AFDD4D7E55 /* Pods_StackViewDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93931B4A8E30610F566335D /* Pods_StackViewDemoTests.framework */; };
 		DE51E8C689DFEAE2E7ACDF7F /* Pods_StackViewDemo_StackViewDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC269F7B4E83B1AC14E78B9 /* Pods_StackViewDemo_StackViewDemoUITests.framework */; };
-		EAA4C49428D37A6F005648BD /* SimpleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA4C49328D37A6F005648BD /* SimpleListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,9 @@
 		5B1EAAAB28D2F5CF004F837D /* StackViewDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5B1EAAB928D300B2004F837D /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		5B1EAABD28D322B0004F837D /* SectionTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitle.swift; sourceTree = "<group>"; };
+		5B1EAAC128D432A4004F837D /* SimpleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleListViewController.swift; sourceTree = "<group>"; };
+		5B1EAAC328D432D3004F837D /* NestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestListViewController.swift; sourceTree = "<group>"; };
+		5B1EAAC528D46D1D004F837D /* DynamicListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicListViewController.swift; sourceTree = "<group>"; };
 		61DFA0F1C95F7B1958D02785 /* Pods-StackViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackViewDemo.debug.xcconfig"; path = "Target Support Files/Pods-StackViewDemo/Pods-StackViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		7C774A54A10DD9BD34D2E2B1 /* Pods-StackViewDemo-StackViewDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackViewDemo-StackViewDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-StackViewDemo-StackViewDemoUITests/Pods-StackViewDemo-StackViewDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7EC269F7B4E83B1AC14E78B9 /* Pods_StackViewDemo_StackViewDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackViewDemo_StackViewDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +71,6 @@
 		D137F7BFFB9454B53AF56C32 /* Pods-StackViewDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackViewDemoTests.release.xcconfig"; path = "Target Support Files/Pods-StackViewDemoTests/Pods-StackViewDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		D8F099F5BE562D7AC4185453 /* Pods_StackViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93931B4A8E30610F566335D /* Pods_StackViewDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackViewDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAA4C49328D37A6F005648BD /* SimpleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,12 +126,12 @@
 		5B1EAA8728D2F5CD004F837D /* StackViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5B1EAAC028D432A4004F837D /* VC */,
 				5B1EAAB828D3007B004F837D /* Category */,
 				5B1EAA8828D2F5CD004F837D /* AppDelegate.swift */,
 				5B1EAA8A28D2F5CD004F837D /* SceneDelegate.swift */,
 				5B1EAA8C28D2F5CD004F837D /* ViewController.swift */,
 				5B1EAABD28D322B0004F837D /* SectionTitle.swift */,
-				EAA4C49328D37A6F005648BD /* SimpleListViewController.swift */,
 				5B1EAA8E28D2F5CD004F837D /* Main.storyboard */,
 				5B1EAA9128D2F5CF004F837D /* Assets.xcassets */,
 				5B1EAA9328D2F5CF004F837D /* LaunchScreen.storyboard */,
@@ -159,6 +163,16 @@
 				5B1EAAB928D300B2004F837D /* UIStackView+Extension.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		5B1EAAC028D432A4004F837D /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				5B1EAAC128D432A4004F837D /* SimpleListViewController.swift */,
+				5B1EAAC328D432D3004F837D /* NestListViewController.swift */,
+				5B1EAAC528D46D1D004F837D /* DynamicListViewController.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 		BFD6E06BCD1639D2F38E461B /* Frameworks */ = {
@@ -423,10 +437,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B1EAAC228D432A4004F837D /* SimpleListViewController.swift in Sources */,
 				5B1EAABE28D322B0004F837D /* SectionTitle.swift in Sources */,
+				5B1EAAC628D46D1D004F837D /* DynamicListViewController.swift in Sources */,
 				5B1EAA8D28D2F5CD004F837D /* ViewController.swift in Sources */,
-				EAA4C49428D37A6F005648BD /* SimpleListViewController.swift in Sources */,
 				5B1EAABA28D300B2004F837D /* UIStackView+Extension.swift in Sources */,
+				5B1EAAC428D432D3004F837D /* NestListViewController.swift in Sources */,
 				5B1EAA8928D2F5CD004F837D /* AppDelegate.swift in Sources */,
 				5B1EAA8B28D2F5CD004F837D /* SceneDelegate.swift in Sources */,
 			);
@@ -604,6 +620,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M9M49RY69Y;
@@ -620,8 +637,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.timing.app.StackViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chc.StackViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -637,6 +655,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M9M49RY69Y;
@@ -653,8 +672,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.timing.app.StackViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chc.StackViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
