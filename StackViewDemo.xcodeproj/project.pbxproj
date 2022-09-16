@@ -21,6 +21,7 @@
 		5B1EAAC228D432A4004F837D /* SimpleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EAAC128D432A4004F837D /* SimpleListViewController.swift */; };
 		5B1EAAC428D432D3004F837D /* NestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EAAC328D432D3004F837D /* NestListViewController.swift */; };
 		5B1EAAC628D46D1D004F837D /* DynamicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EAAC528D46D1D004F837D /* DynamicListViewController.swift */; };
+		5B1EAAC828D48130004F837D /* ScrollListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EAAC728D48130004F837D /* ScrollListViewController.swift */; };
 		5CEFB139063047CDA3164C00 /* Pods_StackViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F099F5BE562D7AC4185453 /* Pods_StackViewDemo.framework */; };
 		CC85467AD78274AFDD4D7E55 /* Pods_StackViewDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93931B4A8E30610F566335D /* Pods_StackViewDemoTests.framework */; };
 		DE51E8C689DFEAE2E7ACDF7F /* Pods_StackViewDemo_StackViewDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC269F7B4E83B1AC14E78B9 /* Pods_StackViewDemo_StackViewDemoUITests.framework */; };
@@ -64,6 +65,7 @@
 		5B1EAAC128D432A4004F837D /* SimpleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleListViewController.swift; sourceTree = "<group>"; };
 		5B1EAAC328D432D3004F837D /* NestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestListViewController.swift; sourceTree = "<group>"; };
 		5B1EAAC528D46D1D004F837D /* DynamicListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicListViewController.swift; sourceTree = "<group>"; };
+		5B1EAAC728D48130004F837D /* ScrollListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollListViewController.swift; sourceTree = "<group>"; };
 		61DFA0F1C95F7B1958D02785 /* Pods-StackViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackViewDemo.debug.xcconfig"; path = "Target Support Files/Pods-StackViewDemo/Pods-StackViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		7C774A54A10DD9BD34D2E2B1 /* Pods-StackViewDemo-StackViewDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackViewDemo-StackViewDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-StackViewDemo-StackViewDemoUITests/Pods-StackViewDemo-StackViewDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7EC269F7B4E83B1AC14E78B9 /* Pods_StackViewDemo_StackViewDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackViewDemo_StackViewDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +173,7 @@
 				5B1EAAC128D432A4004F837D /* SimpleListViewController.swift */,
 				5B1EAAC328D432D3004F837D /* NestListViewController.swift */,
 				5B1EAAC528D46D1D004F837D /* DynamicListViewController.swift */,
+				5B1EAAC728D48130004F837D /* ScrollListViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				5B1EAAC228D432A4004F837D /* SimpleListViewController.swift in Sources */,
 				5B1EAABE28D322B0004F837D /* SectionTitle.swift in Sources */,
 				5B1EAAC628D46D1D004F837D /* DynamicListViewController.swift in Sources */,
+				5B1EAAC828D48130004F837D /* ScrollListViewController.swift in Sources */,
 				5B1EAA8D28D2F5CD004F837D /* ViewController.swift in Sources */,
 				5B1EAABA28D300B2004F837D /* UIStackView+Extension.swift in Sources */,
 				5B1EAAC428D432D3004F837D /* NestListViewController.swift in Sources */,

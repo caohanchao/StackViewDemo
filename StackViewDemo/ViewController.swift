@@ -13,7 +13,7 @@ class ViewController: UIViewController {
   
     private lazy var vStack = VStack()
 
-    private let list = ["case1  简单列表 >","case2 嵌套使用 >","case3 动态更新 >","case 4","case 5"]
+    private let list = ["case1  简单列表 >","case2 嵌套使用 >","case3 动态更新 >","case 4 滚动列表","case 5"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +37,9 @@ class ViewController: UIViewController {
                         nav.modalPresentationStyle = .fullScreen
                         self.present(nav, animated: true)
                     } else if index == 3 {
+                        let nav = UINavigationController.init(rootViewController: ScrollListViewController())
+                        nav.modalPresentationStyle = .fullScreen
+                        self.present(nav, animated: true)
                         
                     } else if index == 4 {
                         
