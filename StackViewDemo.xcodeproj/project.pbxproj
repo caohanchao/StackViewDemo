@@ -17,7 +17,6 @@
 		5B1EAAAA28D2F5CF004F837D /* StackViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EAAA928D2F5CF004F837D /* StackViewDemoUITests.swift */; };
 		5B1EAAAC28D2F5CF004F837D /* StackViewDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EAAAB28D2F5CF004F837D /* StackViewDemoUITestsLaunchTests.swift */; };
 		5B1EAABA28D300B2004F837D /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EAAB928D300B2004F837D /* UIStackView+Extension.swift */; };
-		5B1EAABE28D322B0004F837D /* SectionTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EAABD28D322B0004F837D /* SectionTitle.swift */; };
 		5B1EAAC228D432A4004F837D /* SimpleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EAAC128D432A4004F837D /* SimpleListViewController.swift */; };
 		5B1EAAC428D432D3004F837D /* NestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EAAC328D432D3004F837D /* NestListViewController.swift */; };
 		5B1EAAC628D46D1D004F837D /* DynamicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EAAC528D46D1D004F837D /* DynamicListViewController.swift */; };
@@ -25,6 +24,7 @@
 		5CEFB139063047CDA3164C00 /* Pods_StackViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F099F5BE562D7AC4185453 /* Pods_StackViewDemo.framework */; };
 		CC85467AD78274AFDD4D7E55 /* Pods_StackViewDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93931B4A8E30610F566335D /* Pods_StackViewDemoTests.framework */; };
 		DE51E8C689DFEAE2E7ACDF7F /* Pods_StackViewDemo_StackViewDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC269F7B4E83B1AC14E78B9 /* Pods_StackViewDemo_StackViewDemoUITests.framework */; };
+		EABF801C28D4D19A00DB44C2 /* SectionTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF801B28D4D19A00DB44C2 /* SectionTitle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +61,6 @@
 		5B1EAAA928D2F5CF004F837D /* StackViewDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewDemoUITests.swift; sourceTree = "<group>"; };
 		5B1EAAAB28D2F5CF004F837D /* StackViewDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5B1EAAB928D300B2004F837D /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
-		5B1EAABD28D322B0004F837D /* SectionTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitle.swift; sourceTree = "<group>"; };
 		5B1EAAC128D432A4004F837D /* SimpleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleListViewController.swift; sourceTree = "<group>"; };
 		5B1EAAC328D432D3004F837D /* NestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestListViewController.swift; sourceTree = "<group>"; };
 		5B1EAAC528D46D1D004F837D /* DynamicListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicListViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		D137F7BFFB9454B53AF56C32 /* Pods-StackViewDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackViewDemoTests.release.xcconfig"; path = "Target Support Files/Pods-StackViewDemoTests/Pods-StackViewDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		D8F099F5BE562D7AC4185453 /* Pods_StackViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93931B4A8E30610F566335D /* Pods_StackViewDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackViewDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EABF801B28D4D19A00DB44C2 /* SectionTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionTitle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +133,7 @@
 				5B1EAA8828D2F5CD004F837D /* AppDelegate.swift */,
 				5B1EAA8A28D2F5CD004F837D /* SceneDelegate.swift */,
 				5B1EAA8C28D2F5CD004F837D /* ViewController.swift */,
-				5B1EAABD28D322B0004F837D /* SectionTitle.swift */,
+				EABF801A28D4D19A00DB44C2 /* View */,
 				5B1EAA8E28D2F5CD004F837D /* Main.storyboard */,
 				5B1EAA9128D2F5CF004F837D /* Assets.xcassets */,
 				5B1EAA9328D2F5CF004F837D /* LaunchScreen.storyboard */,
@@ -201,20 +201,12 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		EAA4C4B728D38D10005648BD /* View */ = {
+		EABF801A28D4D19A00DB44C2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EAA4C4B828D38D10005648BD /* SectionTitle.swift */,
+				EABF801B28D4D19A00DB44C2 /* SectionTitle.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		EAA4C4B928D38D10005648BD /* VC */ = {
-			isa = PBXGroup;
-			children = (
-				EAA4C4BA28D38D10005648BD /* SimpleListViewController.swift */,
-			);
-			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,15 +448,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EABF801C28D4D19A00DB44C2 /* SectionTitle.swift in Sources */,
 				5B1EAAC228D432A4004F837D /* SimpleListViewController.swift in Sources */,
-				5B1EAABE28D322B0004F837D /* SectionTitle.swift in Sources */,
 				5B1EAAC628D46D1D004F837D /* DynamicListViewController.swift in Sources */,
 				5B1EAAC828D48130004F837D /* ScrollListViewController.swift in Sources */,
 				5B1EAA8D28D2F5CD004F837D /* ViewController.swift in Sources */,
 				5B1EAABA28D300B2004F837D /* UIStackView+Extension.swift in Sources */,
 				5B1EAAC428D432D3004F837D /* NestListViewController.swift in Sources */,
 				5B1EAA8928D2F5CD004F837D /* AppDelegate.swift in Sources */,
-				EAA4C4BC28D38D11005648BD /* SimpleListViewController.swift in Sources */,
 				5B1EAA8B28D2F5CD004F837D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

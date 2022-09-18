@@ -76,6 +76,10 @@ class SimpleItem: UIView {
 
 private extension SimpleItem {
     func initUI() {
+        addSubview(hStack)
+        hStack.snp.makeConstraints { make in
+            make.edges.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
+        }
         
         /// 这里是使用的扩展方法
         iconView.sizeConstraint = CGSize(width: 40, height: 40)
@@ -83,9 +87,5 @@ private extension SimpleItem {
         follow.sizeConstraint = CGSize(width: 60, height: 30)
         hStack.addArrangedSubviewsMakeConstraint([iconView, title, hStack.spacer(), follow])
         
-        addSubview(hStack)
-        hStack.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
-        }
     }
 }
