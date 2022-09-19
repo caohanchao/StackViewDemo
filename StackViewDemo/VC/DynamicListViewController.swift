@@ -13,6 +13,10 @@ class DynamicListViewController: UIViewController {
     
     private let nameList = ["angle", "123", "baby", "456", "momo", "伍六七"]
         
+    deinit {
+        print("释放")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,7 +40,9 @@ class DynamicListViewController: UIViewController {
             }
             itemList.append(item)
         }
-        vStack.addArrangedSubviewsMakeConstraint(itemList)
+        vStack.addArrangedSubviews(itemList) {
+            
+        }
     }
     
     @objc func backAction() {
@@ -111,16 +117,20 @@ private extension DynamicItem {
             make.edges.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
         }
         
-        /// 这里是使用的扩展方法
-        iconView.sizeConstraint = CGSize(width: 50, height: 50)
-        follow.sizeConstraint = CGSize(width: 60, height: 30)
-        hStack.addArrangedSubviewsMakeConstraint([iconView, vStack, hStack.spacer(), follow])
+        hStack.addArrangedSubviews([iconView, vStack, hStack.spacer(), follow]) {
+            /// 这里是使用的扩展方法
+            iconView.sizeConstraint = CGSize(width: 50, height: 50)
+            follow.sizeConstraint = CGSize(width: 60, height: 30)
+        }
+        
 
         vStack.addArrangedSubviews([titleHStack,
                                     detail])
         
-        followLabel.sizeConstraint = CGSize(width: 50, height: 15)
-        titleHStack.addArrangedSubviewsMakeConstraint([title, followLabel, titleHStack.spacer()])
+    
+        titleHStack.addArrangedSubviews([title, followLabel, titleHStack.spacer()]) {
+            followLabel.sizeConstraint = CGSize(width: 50, height: 15)
+        }
         
     }
     

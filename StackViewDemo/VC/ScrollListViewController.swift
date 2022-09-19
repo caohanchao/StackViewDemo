@@ -14,7 +14,11 @@ class ScrollListViewController: UIViewController {
     private lazy var vStack = VStack(spacing: 16)
     
     private let nameList = ["angle", "123", "baby", "456", "momo", "伍六七八", "4567", "momo", "伍六七", "1111", "456", "momo", "伍六七八", "4567", "momo", "伍六七", "1111"]
-        
+      
+    deinit {
+        print("释放")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +48,9 @@ class ScrollListViewController: UIViewController {
             itemList.append(item)
         }
         
-        vStack.addArrangedSubviewsMakeConstraint(itemList)
+        vStack.addArrangedSubviews(itemList) {
+            
+        }
     }
     
     @objc func backAction() {

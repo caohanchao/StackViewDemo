@@ -34,7 +34,8 @@ extension UIStackView {
     }
     
     /// 添加管理视图 并且 设置约束
-    func addArrangedSubviewsMakeConstraint(_ views: [UIView]) {
+    func addArrangedSubviews(_ views: [UIView], makeConstraint:() -> (Void))  {
+        makeConstraint()
         for view in views {
             addArrangedSubview(view)
             view.makeConstraint()

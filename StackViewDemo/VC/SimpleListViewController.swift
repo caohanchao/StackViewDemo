@@ -14,7 +14,11 @@ class SimpleListViewController: UIViewController {
     private lazy var vStack = VStack(spacing: 16)
     
     private let nameList = ["angle", "123", "baby", "456", "momo", "789"]
-        
+       
+    deinit {
+        print("释放")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +41,9 @@ class SimpleListViewController: UIViewController {
             }
             itemList.append(item)
         }
-        vStack.addArrangedSubviewsMakeConstraint(itemList)
+        vStack.addArrangedSubviews(itemList) {
+            
+        }
     }
     
     @objc func backAction() {
@@ -82,10 +88,14 @@ private extension SimpleItem {
         }
         
         /// 这里是使用的扩展方法
-        iconView.sizeConstraint = CGSize(width: 40, height: 40)
-        title.heightConstraint = 30
-        follow.sizeConstraint = CGSize(width: 60, height: 30)
-        hStack.addArrangedSubviewsMakeConstraint([iconView, title, hStack.spacer(), follow])
+        
+//        hStack.addArrangedSubviewsMakeConstraint([iconView, title, hStack.spacer(), follow])
+//        
+        hStack.addArrangedSubviews([iconView, title, hStack.spacer(), follow]) {
+            iconView.sizeConstraint = CGSize(width: 40, height: 40)
+            title.heightConstraint = 30
+            follow.sizeConstraint = CGSize(width: 60, height: 30)
+        }
         
     }
 }

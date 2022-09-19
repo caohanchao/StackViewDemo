@@ -12,7 +12,11 @@ class NestListViewController: UIViewController {
     private lazy var vStack = VStack(spacing: 16)
     
     private let nameList = ["angle", "123", "baby", "456", "momo", "789"]
-        
+       
+    deinit {
+        print("释放")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,7 +40,9 @@ class NestListViewController: UIViewController {
             }
             itemList.append(item)
         }
-        vStack.addArrangedSubviewsMakeConstraint(itemList)
+        vStack.addArrangedSubviews(itemList) {
+            
+        }
     }
     
     @objc func backAction() {
@@ -82,10 +88,11 @@ private extension NestItem {
             make.edges.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
         }
         
-        /// 这里是使用的扩展方法
-        iconView.sizeConstraint = CGSize(width: 50, height: 50)
-        helpView.sizeConstraint = CGSize(width: 30, height: 30)
-        hStack.addArrangedSubviewsMakeConstraint([iconView, vStack, hStack.spacer(), helpView])
+        hStack.addArrangedSubviews([iconView, vStack, hStack.spacer(), helpView]) {
+            /// 这里是使用的扩展方法
+            iconView.sizeConstraint = CGSize(width: 50, height: 50)
+            helpView.sizeConstraint = CGSize(width: 30, height: 30)
+        }
 
         vStack.addArrangedSubviews([title,
                                     detail])

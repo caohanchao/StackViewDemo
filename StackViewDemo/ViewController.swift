@@ -49,7 +49,10 @@ class ViewController: UIViewController {
             sections.append(section)
         }
 
-        vStack.addArrangedSubviewsMakeConstraint(sections)
+//        vStack.addArrangedSubviewsMakeConstraint(sections)
+        vStack.addArrangedSubviews(sections) {
+            
+        }
         
         view.addSubview(vStack)
         vStack.snp.makeConstraints { make in
